@@ -8,14 +8,11 @@ const outputBox = document.querySelector('#output-box')
 
 
 function submitHandler(){
-  let ip =initialPrice.value
-  let qty = stockQuantity.value
-  let cp = currentPrice.value
+  let ip =  Number(initialPrice.value)
+  let qty = Number(stockQuantity.value)
+  let cp =  Number(currentPrice.value)
 
   calculateProfitAndLoss(ip,qty,cp)
-
-  
-
 }
 
 function calculateProfitAndLoss(inital, quantity, current) {
@@ -23,19 +20,24 @@ function calculateProfitAndLoss(inital, quantity, current) {
     if (inital > current) {
         let loss = (inital - current) * quantity;
         let lossPercentage = (loss / inital) * 100
-        outputBox.innerText = `the loss is ${loss} and loss percentage is ${lossPercentage}% `
+        // outputBox.innerText = `the loss is ${loss} and loss percentage is ${lossPercentage}% `
+        showMessage(`the loss is ${loss} and loss percentage is ${lossPercentage}% `)
 
     } else if (current > inital) {
         let profit = (current - inital) * quantity;
         let profitPercentage = (profit / inital) * 100
-        outputBox.innerText = `the profit is ${profit} and profit percentage is ${profitPercentage}% `
+        // outputBox.innerText = `the profit is ${profit} and profit percentage is ${profitPercentage}% `
+
+        showMessage(`the profit is ${profit} and profit percentage is ${profitPercentage}%`)
 
     } else {
-        outputBox.innerText =`no pain ,no gain`
+        showMessage(`no pain ,no gain`)
     }
 }
 
-// calculateProfitAndLoss(10,10,100)
+function showMessage(message){
 
+outputBox.innerHTML= message
+}
 
 submitButton.addEventListener("click",submitHandler)
