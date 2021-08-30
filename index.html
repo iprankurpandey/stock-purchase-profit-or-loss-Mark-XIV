@@ -13,14 +13,19 @@
 
     <h1>stock register</h1>
     <main>
-        <label>initial price<input type="text" placeholder="enter initial price here" /></label>
+        <label>initial price<input id="initial-price" type="text" placeholder="enter initial price here" /></label>
 
         <label>quantity of stocks
-            <input type="text" placeholder="enter quantity of stocks" /></label>
+            <input id="stocks-quantity" type="text" placeholder="enter quantity of stocks" /></label>
 
         <label>current price
-            <input type="text" placeholder="current price of stocks" /></label>
+            <input id="current-price"
+            type="text" placeholder="current price of stocks" /></label>
+
+            <button id="submit"> check it!!</button>
+            <div id="output-box"></div>
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
