@@ -2,30 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Stock Register</title>
 </head>
 
 <body>
-
-    <h1>stock register</h1>
+    <p class="description">Calculate the stock profit and loss </p>
+    <div class="class-input">
     <main>
         <label>initial price<input id="initial-price" type="text" placeholder="enter initial price here" /></label>
-
-        <label>quantity of stocks
+        <br />
+        <label>no of stocks
             <input id="stocks-quantity" type="text" placeholder="enter quantity of stocks" /></label>
-
+        <br />
         <label>current price
-            <input id="current-price"
-            type="text" placeholder="current price of stocks" /></label>
+            <input id="current-price" type="text" placeholder="current price of stocks" /></label>
+        <br />
+       <div class="class-input"><button id="submit">check it!!</button></div> 
+        <div id="output-box"></div></main></div>
 
-            <button id="submit"> check it!!</button>
-            <div id="output-box"></div>
-    </main>
     <script src="app.js"></script>
+
+    <footer class="footer">
+        <div class="footer-header">Online Presence</div>
+        <ul class="social-links">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/iprankurpandey"><i class="fa fa-github fa-1x"></i>Github</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/iprankurpandey"><i class="fa fa-twitter fa-1x"></i>Twitter</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://linkedin.com/in/iprankurpandey"><i class="fa fa-linkedin fa-1x"></i>
+                    Linkedin</a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
