@@ -18,17 +18,19 @@ function submitHandler(){
 function calculateProfitAndLoss(inital, quantity, current) {
 
     if (inital > current) {
-        let loss = (inital - current) * quantity;
+        let loss = inital - current
+        let lossInQuantity = (inital - current) * quantity;
         let lossPercentage = (loss / inital) * 100
         // outputBox.innerText = `the loss is ${loss} and loss percentage is ${lossPercentage}% `
-        showMessage(`the loss is ${loss} and loss percentage is ${lossPercentage}% `)
+        showMessage(`the loss is ₹ ${loss} and loss percentage is ${lossPercentage}% `)
 
     } else if (current > inital) {
-        let profit = (current - inital) * quantity;
+        let profit = current - inital
+        let profitInQuantity = (current - inital) * quantity;
         let profitPercentage = (profit / inital) * 100
         // outputBox.innerText = `the profit is ${profit} and profit percentage is ${profitPercentage}% `
 
-        showMessage(`the profit is ${profit} and profit percentage is ${profitPercentage}%`)
+        showMessage(`the profit is ₹ ${profit} and profit percentage is ${profitPercentage}%`)
 
     } else {
         showMessage(`no pain ,no gain`)
