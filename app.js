@@ -22,7 +22,7 @@ function calculateProfitAndLoss(inital, quantity, current) {
         let lossInQuantity = (inital - current) * quantity;
         let lossPercentage = (loss / inital) * 100
         // outputBox.innerText = `the loss is ${loss} and loss percentage is ${lossPercentage}% `
-        showMessage(`the loss is ₹ ${lossInQuantityoss} and loss percentage is ${lossPercentage.toFixed(2)}% `)
+        showMessage(`the loss is ₹ ${lossInQuantity} and loss percentage is ${lossPercentage.toFixed(2)}% `)
 
     } else if (current > inital) {
         let profit = current - inital
